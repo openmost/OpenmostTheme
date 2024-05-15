@@ -23,34 +23,34 @@ class OpenmostTheme extends Plugin
     public function configureThemeVariables(Plugin\ThemeStyles $vars)
     {
         $vars->fontFamilyBase = 'Sora, sans-serif';
-        $vars->colorBrand = '#fff'; // Sort indicator and datatable options
-        $vars->colorBrandContrast = '#ffffff';
-        $vars->colorText = '#AEAFBB';
-        #$vars->colorTextLight = '#FF0000';
-        #$vars->colorTextLighter = '#FF0000';
-        #$vars->colorTextContrast = '#FF0000';
-        #$vars->colorLink = '#FF0000';
-        #$vars->colorBaseSeries = '#FF0000';
-        #$vars->colorHeadlineAlternative = '#FF0000';
-        $vars->colorHeaderBackground = '#1C1F41';
-        #$vars->colorHeaderText = '#FF0000';
-        $vars->colorMenuContrastText = '#AEAFBB';
-        $vars->colorMenuContrastTextSelected = '#ffffff';
-        $vars->colorMenuContrastTextActive = '#ffffff';
-        $vars->colorMenuContrastBackground = '#1C1F41';
-        #$vars->colorWidgetExportedBackgroundBase = '';
-        $vars->colorWidgetTitleText = '#ffffff';
-        $vars->colorWidgetTitleBackground = '#1C1F41';
-        $vars->colorWidgetBackground = '#1C1F41';
-        $vars->colorWidgetBorder = '#1C1F41';
-        $vars->colorBackgroundBase = '#161830'; #161830';
-        $vars->colorBackgroundTinyContrast = '#FF0000';
-        $vars->colorBackgroundLowContrast = '#00FF00';
+        $vars->colorBrand = '#426CDA'; // Buttons + Sort indicator + datatable options
+        $vars->colorBrandContrast = '#FFFFFF'; // Buttons text color
+        $vars->colorText = '#AEAFBB'; // Cards title + cards title + button controls text
+        $vars->colorTextLight = '#AEAFBB'; // Info logo (card i logo tooltip)
+        $vars->colorTextLighter = '#FFFFFF'; // Annotation italic date indication color
+        $vars->colorTextContrast = '#FFFFFF'; // Table headings text color
+        $vars->colorLink = '#426CDA'; // Link colors
+        $vars->colorBaseSeries = '#FF0006';
+        $vars->colorHeadlineAlternative = '#FFFFFF'; // Page text on body (out of components)
+        $vars->colorHeaderBackground = '#1C1F41'; // Header nav background color
+        $vars->colorHeaderText = '#FFFFFF'; // Header nav text color
+        $vars->colorMenuContrastText = '#AEAFBB'; // Sidebar menu text color
+        $vars->colorMenuContrastTextSelected = '#FFFFFF'; // Sidebar menu hover active text color
+        $vars->colorMenuContrastTextActive = '#FFFFFF'; // Sidebar menu hover text color
+        $vars->colorMenuContrastBackground = '#1C1F41'; // Sidebar menu items background color
+        $vars->colorWidgetExportedBackgroundBase = '#FF0005';
+        $vars->colorWidgetTitleText = '#ffffff'; // Widget title color
+        $vars->colorWidgetTitleBackground = '#1C1F41'; // Widget title background color
+        $vars->colorWidgetBackground = '#1C1F41'; // Widget background color
+        $vars->colorWidgetBorder = '#1C1F41'; // Widget border color
+        $vars->colorBackgroundBase = '#161830'; // Body color
+        $vars->colorBackgroundTinyContrast = '#282A4B'; //Table hover color
+        $vars->colorBackgroundLowContrast = '#FF0004';
         $vars->colorBackgroundContrast = '#1C1F41'; //Table cell color
-        $vars->colorBackgroundHighContrast = '#0000FF';
-        #$vars->colorBorder = '#FF0000';
-        #$vars->colorCode = '#FF0000';
-        $vars->colorCodeBackground = '#FF0000';
+        $vars->colorBackgroundHighContrast = '#00FFF0';
+        $vars->colorBorder = '#FF0001';
+        $vars->colorCode = '#FF0002';
+        $vars->colorCodeBackground = '#FF0003';
 
     }
 }
