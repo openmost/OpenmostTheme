@@ -48,9 +48,8 @@ class OpenmostTheme extends Plugin
         $vars->colorBackgroundLowContrast = '#FF0004';
         $vars->colorBackgroundContrast = '#1C1F41'; //Table cell color
         $vars->colorBackgroundHighContrast = '#00FFF0';
-        $vars->colorBorder = '#FF0001';
-        $vars->colorCode = '#FF0002';
-        $vars->colorCodeBackground = '#FF0003';
-
+        $vars->colorBorder = '#161830'; // Progress bar border
+        $vars->colorCode = '#e685b5'; // <code> color
+        $vars->colorCodeBackground = 'transparent'; // <code> background color
     }
 }
