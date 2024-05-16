@@ -1,0 +1,53 @@
+.periodSelector {
+
+  .ui-datepicker {
+    border-color: var(--o-body-bg) !important;
+
+    .ui-datepicker-header {
+      border-color: var(--o-body-bg) !important;
+    }
+
+    .ui-datepicker-calendar {
+      border-color: var(--o-body-bg) !important;
+
+      thead {
+        border-color: var(--o-body-bg) !important;
+      }
+    }
+
+
+    .ui-state-default {
+      background-color: var(--o-body-bg) !important;
+      color: var(--o-text-secondary) !important;
+
+      &.ui-state-hover {
+        background-color: var(--o-component-bg-hover) !important;
+        color: var(--o-body-color) !important;
+      }
+    }
+
+    td.ui-datepicker-week-end {
+      .ui-state-default {
+        background-color: var(--o-component-bg) !important;
+
+        &.ui-state-hover {
+          background-color: var(--o-component-bg-hover) !important;
+          color: var(--o-body-color) !important;
+        }
+      }
+    }
+  }
+
+  td.ui-datepicker-current-period {
+    .ui-state-default {
+      background-color: var(--o-component-bg) !important;
+      color: var(--o-body-color) !important;
+
+      &.ui-state-hover {
+        background-color: var(--o-component-bg-hover) !important;
+        color: var(--o-body-color) !important;
+      }
+    }
+  }
+}
+

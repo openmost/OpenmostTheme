@@ -1,0 +1,77 @@
+.segmentEditorPanel.editing {
+  background-color: var(--o-component-bg-hover) !important;
+}
+
+.segmentationContainer {
+
+  .segmentFilter {
+    background-color: var(--o-component-bg-hover) !important;
+    border-color: var(--o-body-bg) !important;
+    color: var(--o-body-color) !important;
+  }
+
+  .segmentList {
+
+    ul {
+
+      li {
+
+        &:hover {
+          background-color: var(--o-component-bg-hover) !important;
+        }
+
+        .compareSegment {
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+}
+
+.segment-element {
+
+  .segment-content {
+
+    h3 {
+      text-shadow: none;
+    }
+  }
+
+  .segment-footer {
+    background-color: var(--o-component-bg-hover) !important;
+  }
+}
+
+
+.segment-generator {
+  .segment-rows,
+  .segment-add-row,
+  .segment-add-row > div,
+  .segment-input {
+    border-color: var(--o-body-bg) !important;
+  }
+
+  .segment-row,
+  .segment-add-or,
+  .segment-add-or > div,
+  .segment-or {
+    background-color: var(--o-component-bg-hover) !important;
+    border-color: var(--o-body-bg) !important;
+  }
+
+  .segment-add-or,
+  .segment-or,
+  .segment-and {
+    text-shadow: none;
+  }
+
+  .segment-and,
+  .segment-or {
+
+    &:before,
+    &:after {
+      background: none;
+      border-color: var(--o-body-bg) !important;
+    }
+  }
+}

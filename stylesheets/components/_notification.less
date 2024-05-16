@@ -3,8 +3,54 @@
   display: flex;
   gap: 2rem;
   border-radius: var(--o-component-border-radius) !important;
+  color: var(--o-body-color) !important;
+
+  a {
+    color: var(--o-body-color) !important;
+  }
+
 
   &.notification-info {
-    background: linear-gradient(90deg, var(--primary) 0%, transparent 50%);
+    border-color: var(--o-primary) !important;
+    background: linear-gradient(90deg, rgba(66, 108, 218, .1) 0%, transparent 50%) !important;
+
+    &:before {
+      color: var(--o-primary);
+    }
+  }
+
+  &.notification-success {
+    border-color: var(--o-success) !important;
+    background: linear-gradient(90deg, rgba(72, 193, 136, .1) 0%, transparent 50%) !important;
+
+    &:before {
+      color: var(--o-success);
+    }
+  }
+
+  &.notification-warning {
+    border-color: var(--o-warning) !important;
+    background: linear-gradient(90deg, rgba(255, 163, 42, .1) 0%, transparent 50%) !important;
+
+    &:before {
+      color: var(--o-warning);
+    }
+  }
+
+  &.notification-danger {
+    border-color: var(--o-danger) !important;
+    background: linear-gradient(90deg, rgba(248, 75, 92, .1) 0%, transparent 50%) !important;
+
+    &:before {
+      color: var(--o-danger);
+    }
+  }
+}
+
+.system.notification {
+  color: var(--o-body-color) !important;
+
+  a, button.close {
+    color: var(--o-body-color) !important;
   }
 }
