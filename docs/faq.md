@@ -3,6 +3,7 @@
 __How to install this theme__
 
 This theme is available in the official marketplace of Matomo. You have to install the same way as a plugin
+
 - Go to the administration panel
 - Look for the Marketplace section and select "Theme" in the dropdown
 - Then search for 'Openmost Theme' and install it.
