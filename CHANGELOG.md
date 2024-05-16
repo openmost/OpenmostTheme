@@ -1,8 +1,12 @@
 ## Changelog
 
+### v5.0.2
+
+fix: Realtime header
+
 ### v5.0.1
 
-Add screenshots
+update: Add screenshots
 
 ### v5.0.0
 

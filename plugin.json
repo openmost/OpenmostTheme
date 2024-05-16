@@ -1,7 +1,7 @@
 {
     "name": "OpenmostTheme",
-    "description": "Ehance your Matomo experience with Openmost design",
-    "version": "5.0.1",
+    "description": "Enhance your Matomo experience with Openmost design",
+    "version": "5.0.2",
     "theme": true,
     "require": {
         "matomo": ">=5.0.0-stable,<6.0.0-b1"
