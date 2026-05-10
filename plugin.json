@@ -1,27 +1,27 @@
 {
     "name": "OpenmostTheme",
     "description": "Enhance your Matomo experience with Openmost design",
-    "version": "5.0.3",
+    "version": "5.1.0",
     "theme": true,
     "require": {
-        "matomo": ">=5.0.0-stable,<6.0.0-b1"
+        "matomo": ">=5.10.0,<6.0.0-b1"
     },
     "stylesheet": "stylesheets\/theme.less",
-    "homepage": "https://openmost.io/products/matomo-openmost-theme/",
+    "homepage": "https://openmost.com/products/matomo-openmost-theme/",
     "license": "GPL v3+",
     "keywords": [
         "Openmost Theme", "openmost", "blue", "modern", "fancy", "design", "ui", "ux"
     ],
     "support": {
-        "email": "ronan@openmost.io",
+        "email": "ronan@openmost.com",
         "issues": "https://github.com/openmost/OpenmostTheme/issues",
         "source": "https://github.com/openmost/OpenmostTheme"
     },
     "authors": [
         {
             "name": "Openmost",
-            "email": "ronan@openmost.io",
-            "homepage": "https://openmost.io"
+            "email": "ronan@openmost.com",
+            "homepage": "https://openmost.com"
         }
     ]
 }

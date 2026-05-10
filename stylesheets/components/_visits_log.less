@@ -1,7 +1,22 @@
-.dataTableVizVisitorLog {
+.action-list-action-icon {
+  background-color: var(--theme-color-border) !important;
+}
 
-  .card {
-    background-color: var(--o-component-bg) !important;
-    color: var(--o-body-color) !important;
+ol.actionList {
+
+  & > li:not(.pageviewActions)::before {
+    box-shadow: 0 0 0 7px var(--theme-color-border) !important;
+  }
+
+  & > li:not(.pageviewActions)::after {
+    border-color: var(--theme-color-border) !important;
+  }
+
+  & > li.pageviewActions::after {
+    border-color: var(--theme-color-border) !important;
+  }
+
+  .repeat {
+    background-color: transparent;
   }
 }

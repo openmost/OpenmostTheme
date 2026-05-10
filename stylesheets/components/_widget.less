@@ -1,7 +1,27 @@
-.widget {
-  border-radius: var(--o-component-border-radius) !important;
+.matomo-widget {
 
-  .widgetTop {
-    border-radius: 1rem 1rem 0 0;
+  .UserCountryMap-overlay {
+
+    .content {
+      background: var(--theme-color-menu-contrast-backgroundHover);
+
+      .map-stats {
+        color: var(--theme-color-widget-title-text) !important;
+      }
+    }
+  }
+
+  select {
+    background: var(--theme-color-background-contrast);
+    border-color: var(--theme-color-menu-contrast-backgroundHover);
+    color: var(--theme-color-widget-title-text) !important;
+  }
+
+  .limitSelection > div .select-wrapper {
+    background-color: var(--theme-color-background-contrast);
+
+    &:hover {
+      background-color: var(--theme-color-background-base);
+    }
   }
 }
