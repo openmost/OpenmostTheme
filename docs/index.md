@@ -1,42 +1,37 @@
-# Openmost Theme — Documentation
+# Openmost Theme Documentation
 
-The Openmost Theme converts the Matomo interface to match the [openmost.io](https://openmost.io) brand. It plugs into Matomo's native theming engine (5.10+) to define a complete light and dark palette, then layers component-level LESS tweaks on top.
+The Openmost Theme converts the Matomo interface to match the [Openmost](https://openmost.com) design system. It plugs into Matomo's native theming engine to define a complete light and dark palette, then layers a few component-level LESS tweaks on top.
 
 ## Design system
 
-The dark palette is the canonical Openmost identity, lifted from openmost.io. The light palette is a sibling scale designed to feel native on white surfaces while keeping the same Openmost blue accent.
+Both palettes follow the Openmost website: the same Openmost blue accent, white cards on a soft background in light mode, and brand navy cards on a deep page background in dark mode.
 
 | Token | Light | Dark |
 | --- | --- | --- |
-| Brand | `#426CDA` | `#426CDA` |
-| Background base | `#F5F6FB` | `#161830` |
-| Surface (widgets) | `#FFFFFF` | `#1C1F41` |
-| Surface hover | `#ECEFF8` | `#282A4B` |
+| Brand | `#426CDA` | `#7A96E8` |
+| Background base | `#F5F6FA` | `#0A0B1A` |
+| Surface (widgets, header) | `#FFFFFF` | `#161830` |
+| Surface hover | `#ECEFF8` | `#1A1C38` |
 | Text primary | `#1C1F41` | `#FFFFFF` |
-| Text secondary | `#4A5169` | `#AEAFBB` |
-| Border | `#E5E7F0` | `#1C1F41` |
-| Chart base | `#DC3545` | `#DC3545` |
+| Text secondary | `#4A5169` | `rgba(255, 255, 255, 0.87)` |
+| Border | `#E5E7F0` | `#282A4B` |
+| Chart base | `#F84B5C` | `#F84B5C` |
 
-> openmost.io is dark-only by design. The light variant adapts the same brand vocabulary (Openmost blue, Sora, 1rem radii) for users who prefer light mode in their analytics tool.
-
-**Typography:** [Sora](https://fonts.google.com/specimen/Sora), shipped with the plugin (variable + static weights).
-
-**Shape:** 1rem corner radius on widgets and form controls, 1.5rem default padding.
+**Typography:** [Sora](https://fonts.google.com/specimen/Sora) for headings (page, report and widget titles), shipped with the plugin as a variable font under the SIL Open Font License. Text uses the system font.
 
 ## File structure
 
 ```
 OpenmostTheme/
-├── OpenmostTheme.php          # Registers theme variables (light + dark arrays)
-├── plugin.json                # Matomo metadata, requires >=5.10
-├── fonts/Sora/                # Sora font files
+├── OpenmostTheme.php          # Registers theme variables (light + dark pairs)
+├── plugin.json                # Matomo metadata, requires Matomo 6
+├── fonts/Sora/                # Sora variable font and its license
 ├── stylesheets/
-│   ├── theme.less             # Entry point — imports everything
-│   ├── _root.less             # Openmost-specific tokens (radius, padding)
-│   ├── _variables.less        # Re-exports _root for back-compat
-│   ├── _fonts.less            # @font-face declarations for Sora
+│   ├── theme.less             # Entry point, imports everything
+│   ├── _fonts.less            # @font-face declaration for Sora
 │   ├── layout/
-│   │   └── _main.less         # Scrollbar styling
+│   │   ├── _main.less         # Scrollbar styling
+│   │   └── _typography.less   # Sora headings
 │   ├── pages/
 │   │   └── _login.less        # Login screen tweaks
 │   └── components/            # One file per overridden component
@@ -45,26 +40,26 @@ OpenmostTheme/
 
 ## How theming works
 
-Matomo 5.10 ships a `Plugin\ThemeStyles` class with one property per theme color. Every property accepts either a single string or a `[light, dark]` array — Matomo emits the right CSS variable for each mode and switches via `data-theme-mode` plus `prefers-color-scheme`.
+Matomo ships a `Plugin\ThemeStyles` class with one property per theme color. Every property accepts either a single string or a `[light, dark]` array: Matomo emits the right CSS variable for each mode and switches through `data-theme-mode` plus `prefers-color-scheme` for users who picked Match browser.
 
-`OpenmostTheme.php` listens to the `Theme.configureThemeVariables` event and assigns `[light, dark]` arrays for every relevant property. The CSS files in `stylesheets/components/` then consume those tokens with `var(--theme-color-*)`, so the same component definition works in both modes.
+`OpenmostTheme.php` listens to the `Theme.configureThemeVariables` event and assigns `[light, dark]` pairs for every relevant property. The CSS files in `stylesheets/components/` consume those tokens with `var(--theme-color-*)`, so the same component definition works in both modes.
 
 ## Overridden components
 
 Component overrides live in `stylesheets/components/`:
 
 - Activity log, admin pages, alerts, copy-to-clipboard
-- Custom reports, dropdowns, entity lists, funnels
+- Custom reports, entity lists, funnels
 - Form inputs, jqPlot charts, multi-sites
 - Notifications, period selector, scheduled reports
-- Segment editor, sidebar, tag manager, transitions report
+- Segment editor, sidebar, tag manager
 - Visitor profile, visits log, widgets
 
-Each file is intentionally small — the goal is a minimal diff against Matomo defaults.
+Each file is intentionally small: the goal is a minimal diff against Matomo defaults.
 
 ## Customizing the theme
 
-You don't need to fork the plugin to tweak it. Override any `--theme-color-*` variable in a small companion plugin or in `misc/user/user.css`:
+You don't need to fork the plugin to tweak it. Override any `--theme-color-*` variable in a small companion plugin:
 
 ```css
 :root {
@@ -73,15 +68,6 @@ You don't need to fork the plugin to tweak it. Override any `--theme-color-*` va
 
 [data-theme-mode="dark"] {
   --theme-color-background-base: #0b0d24;
-}
-```
-
-Openmost-only tokens are also available for shape adjustments:
-
-```css
-:root {
-  --o-component-border-radius: 0.5rem;
-  --o-component-padding: 1rem;
 }
 ```
 

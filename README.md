@@ -1,29 +1,30 @@
 # Openmost Theme for Matomo
 
-A modern, brand-aligned theme that brings the [openmost.io](https://openmost.io) visual identity to your Matomo dashboard. Built on top of Matomo's native theming engine — no HTML structure changes, no functional overrides, just CSS.
+A modern, brand-aligned theme that brings the [Openmost](https://openmost.com) design system to your Matomo dashboard. Built on top of Matomo's native theming engine: no HTML structure changes, no functional overrides, just colors and CSS.
 
 ## Highlights
 
-- **Light & Dark modes** — fully wired through Matomo's native `data-theme-mode` switching (auto / light / dark).
-- **Openmost design system** — Sora typography, Openmost blue (`#426CDA`), navy panels (`#1C1F41`), 1rem rounded corners.
-- **Native variables** — uses Matomo's `--theme-color-*` CSS variables throughout; override any of them in your own plugin to fine-tune the look.
-- **Zero conflicts** — the theme is purely visual. Markup is untouched, so it stays compatible with every other Matomo plugin.
+- **Light & Dark modes**: each user picks Light, Dark or Match browser in their personal settings, the Openmost palette follows.
+- **Openmost design system**: Openmost blue (`#426CDA`), navy dark scale (deep `#0A0B1A` page with `#161830` cards), Openmost red for charts.
+- **Sora headings**: page, report and widget titles use Sora, the Openmost brand font, bundled with the theme. Text keeps the system font for readability.
+- **Native variables**: uses Matomo's `--theme-color-*` CSS variables throughout; override any of them to fine-tune the look.
+- **Zero conflicts**: the theme is purely visual. Markup is untouched, so it stays compatible with every other Matomo plugin.
 
 ## Requirements
 
-- Matomo **5.10** or newer (uses the light/dark `ThemeStyles` array API introduced in 5.10)
+- Matomo **6** (Openmost Theme 6.x), PHP 8.1 or higher, MySQL 8.0+ or MariaDB 10.6+
+- For Matomo 5.10 or later, install Openmost Theme **5.1.x**
 
 ## Installation
 
 1. Open your Matomo administration panel.
 2. Go to **Marketplace** and filter by **Themes**.
-3. Search for **Openmost Theme**, install it.
-4. Activate it from **Personal → Settings → General Settings** (or **System → General Settings** for the instance default).
-5. Pick **Auto / Light / Dark** in the theme mode selector — the Openmost palette adapts to the choice.
+3. Search for **Openmost Theme**, install and activate it. The theme applies to the whole instance.
+4. Each user picks **Light / Dark / Match browser** in their personal settings, the Openmost palette adapts to the choice.
 
 ## Customization
 
-Every color is exposed as a CSS variable. To tweak the palette, override any `--theme-color-*` variable in a custom plugin or in `misc/user/user.css`:
+Every color is exposed as a CSS variable. To tweak the palette, override any `--theme-color-*` variable in a custom plugin:
 
 ```css
 :root {
@@ -31,19 +32,10 @@ Every color is exposed as a CSS variable. To tweak the palette, override any `--
 }
 ```
 
-Openmost-specific tokens (border radius, padding) are also available:
-
-```css
-:root {
-  --o-component-border-radius: 0.75rem;
-  --o-component-padding: 1.25rem;
-}
-```
-
 ## Support
 
 - Issues: <https://github.com/openmost/OpenmostTheme/issues>
-- Email: ronan@openmost.io
-- Want a custom theme or a Matomo agency? <https://openmost.io>
+- Email: ronan@openmost.com
+- Want a custom theme or a Matomo agency? <https://openmost.com>
 
-Thank you for installing — and enjoy the new look.
+Thank you for installing, and enjoy the new look.
