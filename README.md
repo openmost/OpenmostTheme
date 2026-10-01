@@ -1,49 +1,50 @@
-# Openmost Theme for Matomo
+# Openmost Theme
 
-A modern, brand-aligned theme that brings the [openmost.io](https://openmost.io) visual identity to your Matomo dashboard. Built on top of Matomo's native theming engine — no HTML structure changes, no functional overrides, just CSS.
+The Openmost design system for Matomo, in light and dark mode.
 
-## Highlights
+## Features
 
-- **Light & Dark modes** — fully wired through Matomo's native `data-theme-mode` switching (auto / light / dark).
-- **Openmost design system** — Sora typography, Openmost blue (`#426CDA`), navy panels (`#1C1F41`), 1rem rounded corners.
-- **Native variables** — uses Matomo's `--theme-color-*` CSS variables throughout; override any of them in your own plugin to fine-tune the look.
-- **Zero conflicts** — the theme is purely visual. Markup is untouched, so it stays compatible with every other Matomo plugin.
+- **Openmost design system**: Openmost blue accent (`#426CDA`), white cards on a soft background in light mode, navy panels (`#1C1F41`) on a navy page (`#161830`) in dark mode, red (`#DC3545`) for charts.
+- **Light and dark mode**: every color is defined as a `[light, dark]` pair. Each user keeps choosing Light, Dark or Match browser in their personal settings.
+- **Sora typography**: the interface uses Sora, the Openmost brand font, bundled with the theme.
+- **Native theme API**: colors are set through Matomo's `Theme.configureThemeVariables` event, so core and third party plugins pick them up, and every color can be overridden with a `--theme-color-*` CSS variable.
+- **Purely visual**: no JavaScript and no markup change, compatible with every other Matomo plugin.
 
 ## Requirements
 
-- Matomo **5.10** or newer (uses the light/dark `ThemeStyles` array API introduced in 5.10)
+- Matomo 5.10.0 or later, up to Matomo 6 excluded (`>=5.10.0,<6.0.0-b1`)
+- On Matomo 6, install Openmost Theme 6.x instead.
 
-## Installation
+## Installation / Configuration
 
-1. Open your Matomo administration panel.
-2. Go to **Marketplace** and filter by **Themes**.
-3. Search for **Openmost Theme**, install it.
-4. Activate it from **Personal → Settings → General Settings** (or **System → General Settings** for the instance default).
-5. Pick **Auto / Light / Dark** in the theme mode selector — the Openmost palette adapts to the choice.
+1. Go to *Administration > Platform > Marketplace*, filter by **Themes** and search for "Openmost Theme".
+2. Click **Install**, then **Activate**. A theme applies to the whole Matomo instance.
+3. Each user picks the light or dark mode in their personal settings.
 
-## Customization
-
-Every color is exposed as a CSS variable. To tweak the palette, override any `--theme-color-*` variable in a custom plugin or in `misc/user/user.css`:
+There are no settings. To tweak the palette, override any `--theme-color-*` variable from a small companion plugin:
 
 ```css
 :root {
-  --theme-color-brand: #00b4d8; /* your brand */
+  --theme-color-brand: #00b4d8;
 }
 ```
 
-Openmost-specific tokens (border radius, padding) are also available:
+See [docs/index.md](docs/index.md) for the full palette.
 
-```css
-:root {
-  --o-component-border-radius: 0.75rem;
-  --o-component-padding: 1.25rem;
-}
-```
+## Need help with Matomo?
+
+Openmost is an official Matomo Implementation Partner. We also build [custom Matomo themes](https://openmost.com/matomo/services/custom-theme?utm_source=matomo_marketplace&utm_medium=referral&utm_campaign=services&utm_content=openmosttheme) in your own brand colours and fonts, on the official theme API, in light and dark mode.
 
 ## Support
 
-- Issues: <https://github.com/openmost/OpenmostTheme/issues>
-- Email: ronan@openmost.io
-- Want a custom theme or a Matomo agency? <https://openmost.io>
+- Homepage: https://openmost.com/matomo/extensions/openmost-theme
+- Issues: https://github.com/openmost/OpenmostTheme/issues
+- Email: ronan@openmost.com
 
-Thank you for installing — and enjoy the new look.
+## Screenshots
+
+See the `screenshots/` folder, or the plugin page on the Matomo Marketplace.
+
+## License
+
+GPL v3 or later. The Sora font is bundled under the SIL Open Font License (`fonts/Sora/OFL.txt`).
