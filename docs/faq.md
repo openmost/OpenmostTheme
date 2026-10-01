@@ -41,4 +41,4 @@ It's used in production by [Openmost](https://openmost.com) and on every Matomo 
 
 ### I want a custom theme for my brand. Can you build one?
 
-Yes. Openmost is a Matomo agency and builds custom themes and plugins for clients. Get in touch at <https://openmost.com>.
+Yes. Openmost is an official Matomo Implementation Partner and builds [custom Matomo themes](https://openmost.com/matomo/services/custom-theme?utm_source=matomo_marketplace&utm_medium=referral&utm_campaign=services&utm_content=openmosttheme) in your own brand colours and fonts, on the official theme API, in light and dark mode.
