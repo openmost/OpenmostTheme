@@ -7,6 +7,7 @@
 - Plugin homepage moved to https://openmost.com/matomo/extensions/openmost-theme, new Marketplace screenshots in light and dark mode.
 - Shorter Marketplace description that fits the plugin cards, and campaign parameters on the Openmost links of the README.
 - Smaller package: only the Sora variable font used by the theme is shipped, without the unused static weights.
+- README: the plugin description now shows in the Description tab of the Matomo Marketplace.
 
 ## v5.1.0
 

@@ -1,8 +1,10 @@
 # Openmost Theme
 
+## Description
+
 The Openmost design system for Matomo, in light and dark mode.
 
-## Features
+### Features
 
 - **Openmost design system**: Openmost blue accent (`#426CDA`), white cards on a soft background in light mode, navy panels (`#1C1F41`) on a navy page (`#161830`) in dark mode, red (`#DC3545`) for charts.
 - **Light and dark mode**: every color is defined as a `[light, dark]` pair. Each user keeps choosing Light, Dark or Match browser in their personal settings.
@@ -10,12 +12,12 @@ The Openmost design system for Matomo, in light and dark mode.
 - **Native theme API**: colors are set through Matomo's `Theme.configureThemeVariables` event, so core and third party plugins pick them up, and every color can be overridden with a `--theme-color-*` CSS variable.
 - **Purely visual**: no JavaScript and no markup change, compatible with every other Matomo plugin.
 
-## Requirements
+### Requirements
 
 - Matomo 5.10.0 or later, up to Matomo 6 excluded (`>=5.10.0,<6.0.0-b1`)
 - On Matomo 6, install Openmost Theme 6.x instead.
 
-## Installation / Configuration
+### Installation / Configuration
 
 1. Go to *Administration > Platform > Marketplace*, filter by **Themes** and search for "Openmost Theme".
 2. Click **Install**, then **Activate**. A theme applies to the whole Matomo instance.
@@ -31,7 +33,7 @@ There are no settings. To tweak the palette, override any `--theme-color-*` vari
 
 See [docs/index.md](docs/index.md) for the full palette.
 
-## Need help with Matomo?
+### Need help with Matomo?
 
 Openmost is an official Matomo Implementation Partner. We also build [custom Matomo themes](https://openmost.com/matomo/services/custom-theme?utm_source=matomo_marketplace&utm_medium=referral&utm_campaign=services&utm_content=openmosttheme) in your own brand colours and fonts, on the official theme API, in light and dark mode.
 
