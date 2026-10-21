@@ -1,7 +1,7 @@
 {
     "name": "OpenmostTheme",
     "description": "The Openmost design system for Matomo, in light and dark mode.",
-    "version": "5.1.1",
+    "version": "5.1.2",
     "theme": true,
     "stylesheet": "stylesheets/theme.less",
     "require": {

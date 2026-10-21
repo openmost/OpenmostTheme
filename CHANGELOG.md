@@ -1,5 +1,9 @@
 # Changelog
 
+## v5.1.2
+
+- Request parameters are read with `Piwik\Request` instead of the deprecated `Common::getRequestVar`, ready for the next Matomo versions.
+
 ## v5.1.1
 
 - Fixed: Sora is loaded with a relative URL, so it also loads when Matomo is served from a subdirectory.
